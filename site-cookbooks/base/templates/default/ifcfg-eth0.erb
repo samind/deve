@@ -1,0 +1,8 @@
+<%# /etc/sysconfig/network-scripts/ifcfg-eth0 %>
+DEVICE=eth0
+TYPE=Ethernet
+ONBOOT=yes
+NM_CONTROLLED=<%= node.set['network']['ifcfg_eth0']['nm_controlled'] %>
+BOOTPROTO=<%= node.set['network']['ifcfg_eth0']['bootproto'] %>
+IPADDR=<%= node.set['network']['ifcfg_eth0']['ipaddr'] %>
+NETMASK=<%= node.set['network']['ifcfg_eth0']['netmask'] %>

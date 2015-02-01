@@ -1,0 +1,30 @@
+{
+   "network": {
+     "hostname": "deve",
+     "gateway": "192.168.1.2",
+     "networking_ipv6": "no",
+     "ifcfg_eth0": {
+        "ipaddr": "192.168.1.200",
+        "netmask": "255.255.255.0",
+        "nm_controlled": "no",
+        "bootproto": "none"
+     }
+   },
+    "hosts": {
+        "ipaddr": "192.168.1.200",
+        "hostname": "deve"
+    },
+   "resolv_conf": {
+     "nameserver": {
+        "search": "localdomain",
+        "first": "192.168.100.1",
+        "second": "192.168.1.2"
+     }
+   },
+  "run_list": [
+   "recipe[base::network]" 
+   ],
+    "automatic": {
+    "ipaddress": "192.168.1.129"
+  }
+}

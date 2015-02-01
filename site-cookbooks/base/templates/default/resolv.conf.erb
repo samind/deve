@@ -1,0 +1,4 @@
+<%# /etc/resolv.conf %>
+search <%= node.set['resolv_conf']['nameserver']['search'] %>
+nameserver <%= node.set['resolv_conf']['nameserver']['first'] %>
+nameserver <%= node.set['resolv_conf']['nameserver']['second'] %>

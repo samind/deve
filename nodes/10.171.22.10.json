@@ -1,0 +1,31 @@
+{
+  "run_list": [
+   "recipe[base::grub]", 
+   "recipe[base::network]"
+   ],
+   "network": {
+     "hostname": "deve",
+     "gateway": "10.171.22.2",
+     "networking_ipv6": "no",
+     "ifcfg_eth0": {
+        "ipaddr": "10.171.22.11",
+        "netmask": "255.255.255.0",
+        "nm_controlled": "no",
+        "bootproto": "none"
+     }
+   },
+    "hosts": {
+        "ipaddr": "10.171.22.11",
+        "hostname": "deve"
+    },
+   "resolv_conf": {
+     "nameserver": {
+        "search": "localdomain",
+        "first": "10.171.22.2",
+        "second": "8.8.8.8"
+     }
+   },
+    "automatic": {
+    "ipaddress": "10.171.22.10"
+  }
+}

@@ -1,5 +1,5 @@
 <%# /etc/sysconfig/network %>
 NETWORKING=yes
-HOSTNAME=<%= node.set['network']['hostname'] %>
-GATEWAY=<%= node.set['network']['gateway'] %>
-NETWORKING_IPV6=<%= node.set['network']['networking_ipv6'] %>
+HOSTNAME=<%= node['network']['hostname'] %>
+GATEWAY=<%= node['network']['gateway'] %>
+NETWORKING_IPV6=<%= node['network']['networking_ipv6'] %>

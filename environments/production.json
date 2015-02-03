@@ -1,0 +1,37 @@
+{
+  "name": "production",
+  "description":"production environment",
+  "chef_type": "environment",
+  "json_class": "Chef::Environment",
+  "default_attributes": {
+  },
+  "override_attributes": {
+   "ssh": {
+        "root_login": "no",
+        "use_dns": "no",
+        "AllowUsers": "devops@10.172.7.1"
+   },
+   "network": {
+     "hostname": "deve",
+     "gateway": "10.172.7.2",
+     "networking_ipv6": "no",
+     "ifcfg_eth0": {
+        "ipaddr": "10.172.7.11",
+        "netmask": "255.255.255.0",
+        "nm_controlled": "no",
+        "bootproto": "none"
+     }
+   },
+   "hosts": {
+        "ipaddr": "10.172.7.11",
+        "hostname": "deve"
+   },
+   "resolv_conf": {
+     "nameserver": {
+        "search": "localdomain",
+        "first": "10.172.7.2",
+        "second": "8.8.8.8"
+     }
+   }
+  } 
+}

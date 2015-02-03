@@ -16,7 +16,7 @@ end
 file '/boot/grub/grub.conf' do
  _file = Chef::Util::FileEdit.new(path)
  _file.search_file_replace("timeout=5", "timeout=0")
- _file.write_file
+# _file.write_file
  content _file.send(:editor).lines.join
 end
 

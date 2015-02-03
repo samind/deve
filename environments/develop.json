@@ -1,0 +1,37 @@
+{
+  "name": "develop",
+  "description":"develop environment",
+  "chef_type": "environment",
+  "json_class": "Chef::Environment",
+  "default_attributes": {
+  },
+  "override_attributes": {
+   "ssh": {
+        "root_login": "no",
+        "use_dns": "no",
+        "AllowUsers": "devops@192.168.1.1"
+   },
+   "network": {
+     "hostname": "deve",
+     "gateway": "192.168.1.2",
+     "networking_ipv6": "no",
+     "ifcfg_eth0": {
+        "ipaddr": "192.168.1.11",
+        "netmask": "255.255.255.0",
+        "nm_controlled": "no",
+        "bootproto": "none"
+     }
+   },
+   "hosts": {
+        "ipaddr": "192.168.1.11",
+        "hostname": "deve"
+   },
+   "resolv_conf": {
+     "nameserver": {
+        "search": "localdomain",
+        "first": "192.168.1.2",
+        "second": "8.8.8.8"
+     }
+   }
+  } 
+}

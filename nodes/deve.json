@@ -4,7 +4,8 @@
    "recipe[base::grub]",
    "recipe[base::selinux]",   
    "recipe[base::network]",
-   "recipe[base::ssh]"
+   "recipe[base::ssh]",
+   "recipe[apache]"
    ],
     "automatic": {
     "ipaddress": "deve"

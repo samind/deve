@@ -4,13 +4,7 @@ require 'json'
 
 set :backend, :ssh
 
-if ENV['json_file'] == 'dev.json'
-    set_property JSON.parse(File.read("spec/dev.json"))
-end
-
-if ENV['json_file'] == 'production.json'
-    set_property JSON.parse(File.read("spec/production.json"))
-end
+set_property JSON.parse(File.read("#{ENV['json_file']}"))
 
 if ENV['ASK_SUDO_PASSWORD']
   begin
